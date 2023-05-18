@@ -2,10 +2,7 @@
     "name": "placeholder_package",
     "description": "Note: double curly-braces because python .format",
     "version": "0.0.0",
-    "dependencies": {
-        "cross-env": "latest"
-    },
     "scripts": {
-      "postinstall": "cross-env \"echo $PWD && cd $PWD && dprint check\""
+      "postinstall": "bash -c \"echo $PWD; cd $PWD; dprint check\""
     }
 }
