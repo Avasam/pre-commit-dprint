@@ -3,6 +3,6 @@
     "description": "Note: double curly-braces because python .format",
     "version": "0.0.0",
     "scripts": {
-      "postinstall": "dprint check"
+      "postinstall": "printenv && dprint check"
     }
 }
