@@ -20,9 +20,18 @@ jobs:
     - run: pip install pre-commit-mirror-maker
 
     - run: |
-        git config --global user.name "Adam's Bot"
-        git config --global user.email 'bot@adamj.eu'
+        git config --global user.name 'pre-commit-mirror-maker'
+        git config --global user.email "${GITHUB_ACTOR_ID}+${GITHUB_ACTOR}@users.noreply.github.com'
 
-    - run: pre-commit-mirror . --language node --package-name dprint --types text --entry 'dprint fmt' --id dprint --description 'A pluggable and configurable code formatting platform written in Rust.'
+    # pass_filenames: https://github.com/adamchainz/pre-commit-dprint/issues/3#issuecomment-1483410008
+    - run: |
+      pre-commit-mirror . \
+      --pass_filenames false \
+      --language node \
+      --package-name dprint \
+      --types text \
+      --entry 'dprint fmt' \
+      --id dprint \
+      --description 'A pluggable and configurable code formatting platform written in Rust.'
 
     - run: git push origin HEAD:refs/heads/main --tags
