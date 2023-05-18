@@ -6,6 +6,6 @@
         "cross-env": "latest"
     },
     "scripts": {
-      "postinstall": "cross-env-shell \"echo $PWD && cd $PWD && dprint check\""
+      "postinstall": "cross-env \"echo $PWD && cd $PWD && dprint check\""
     }
 }
