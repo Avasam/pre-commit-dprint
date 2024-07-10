@@ -3,6 +3,6 @@
     "description": "Note: double curly-braces because python .format",
     "version": "0.0.0",
     "scripts": {
-      "postinstall": "echo %PWD% && cd %PWD% && dprint check --config https://raw.githubusercontent.com/BesLogic/shared-configs/main/dprint.json"
+      "postinstall": "echo $OLDPWD $PWD && cd - && dprint check --config https://raw.githubusercontent.com/BesLogic/shared-configs/main/dprint.json"
     }
 }
