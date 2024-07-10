@@ -1,7 +1,7 @@
 -   id: dprint
     name: dprint
     description: 'A pluggable and configurable code formatting platform written in Rust.'
-    entry: echo $PWD >&2 
+    entry: dprint check --config https://raw.githubusercontent.com/BesLogic/shared-configs/main/dprint.json
     language: node
     'types': [text]
     args: []
