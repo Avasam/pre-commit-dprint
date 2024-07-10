@@ -2,10 +2,4 @@
     "name": "placeholder_package",
     "description": "Note: double curly-braces because python .format",
     "version": "0.0.0",
-    "scripts": {
-      "postinstall": "dprint output-file-paths --config https://raw.githubusercontent.com/BesLogic/shared-configs/main/dprint.json"
-    },
-    "dependencies": {
-        "dprint": "0.36.1"
-    }
 }
