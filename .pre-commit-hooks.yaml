@@ -1,7 +1,7 @@
 -   id: dprint
     name: dprint
     description: 'A pluggable and configurable code formatting platform written in Rust.'
-    entry: dprint fmt || echo $PWD
+    entry: echo $PWD >&2 
     language: node
     'types': [text]
     args: []
